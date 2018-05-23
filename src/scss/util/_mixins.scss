@@ -1,0 +1,109 @@
+//GOOGLE FONTS
+
+
+@mixin rgba-bg($r, $g, $b, $a) {
+  background-color: ($r, $g, $b, $a);
+}
+
+
+@mixin dimensions ($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin absolute ($top, $right, $bottom, $left) {
+  position:absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin fixed ($top, $right, $bottom, $left) {
+  position:fixed;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin site-border-radius ($border-radius) {
+  border-radius: $border-radius;
+}
+
+
+@mixin v-margin-padding($margin-top, $margin-bottom, $padding-top, $padding-bottom) {
+  margin-top: $margin-top;
+  margin-bottom: $margin-bottom;
+  padding-top: $padding-top;
+  padding-bottom: $padding-bottom;
+
+}
+
+
+  @mixin gwf($fonts...) {
+    $url: "https://fonts.googleapis.com/css?family=";
+    $nb: 0;
+    
+    @each $font-name in $fonts {
+      $nb: $nb + 1;
+      $nb-word: 0;
+      
+      @each $word in $font-name {
+        $nb-word: $nb-word + 1;
+        $url: $url + $word;
+        
+        @if $nb-word < length($font-name) {
+          $url: $url + "+"; 
+        } 
+      }
+      
+      @if $nb < length($fonts) {
+         $url: $url + "|"; 
+      }
+    }
+    
+    @import url(#{$url});
+  }
+
+@mixin fonts ($font-family, $color) {
+  font-family: $font-family !important;
+  color: $color !important;
+}
+
+
+@mixin theme($theme) {
+  $theme-color: $theme;
+  $theme-colors: ("primary": $theme);
+}
+
+
+
+
+@mixin footer {
+
+html {position: relative;min-height: 100%;}
+object {width: 100%;position: absolute;left: 0;right: 0;bottom: 0;}
+article {margin-bottom: 50px;}
+
+}
+
+
+//LINKS
+@mixin link-color ($link) {
+  a {    
+    color: $link;
+
+    &:hover {
+      color: darken($link, 10%) !important; 
+      text-decoration:none;
+    }
+    &:active {
+      color: darken($link, 10%) !important;
+    }
+    &:visited {
+      color: $theme-color;
+    }
+  }
+  
+}

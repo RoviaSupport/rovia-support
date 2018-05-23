@@ -1,0 +1,88 @@
+$theme-colors: () !default;
+$theme-color:() !default;
+
+
+
+	$theme-colors: map-merge((	
+		"rovia": $rovia-blue,
+		"service": $service-teal,	
+		"sales": $sales-pink,
+		"air": $air-sky
+	), $theme-colors);
+
+
+
+
+//TYPOGRAPHY
+
+	$body-font:	Roboto;
+	$body-URL: ('Roboto');
+	$body-color: #000;
+	$body-style: sans-serif;
+
+	//$headingFont:  Ubuntu;
+	//$headingURL: ('Ubuntu');
+	$heading-font:  Raleway;
+	$heading-URL: ('Raleway');
+
+
+	$heading-color: $theme-color;
+	$heading-style: sans-serif;
+
+	$display-font:  Poiret One;
+	$display-URL: ('Poiret+One');
+	$display-color: $theme-color;
+	$display-style: sans-serif;
+
+	$code-font:  Inconsolata;
+	$code-URL: $code-font;
+	$code-color: theme-color('danger');
+	$code-style: sans-serif;
+
+//COMPONENTS
+
+	//CARDS
+
+		$card-margin-bottom: 30px;
+
+	//BOOKMARKS
+
+		$badge-font-weight: 100;
+
+//PAGE LAYOUT
+
+	$site-border-radius: 0;
+	$borer-radius: $site-border-radius !important;
+
+
+	//SIDENAV 
+
+		$sidenav-link-color: #ccc;
+		$sidebar-nav-link-hover-color: #fff;
+
+		$sidenav-closebtn-margin-left: 50px;
+		$sidenav-padding-top: 60px;
+		$sidenav-container-padding-top: 150px;
+
+		$sidenav-bg-opacity: 0.6;
+
+	$title-box-margin-top: 50px;
+
+	$header-margin-bottom: 20px;
+
+	$main-width: 75%;
+	$sidebar-width: 20%;
+
+	$breadcrumb-bg: $theme-color;
+	$breadcrumb-divider-color: #fff;
+	$breadcrumb-divider: quote(">");
+	$breadcrumb-active-color: #aaa;
+	$breadcrumb-border-radius: $site-border-radius;
+	$breadcrumb-bookmark-padding: 10px;
+
+	$footer-height: 1200px;
+	$footer-padding: 70px 0;
+	$mega-menu-height: 612px;
+	$mega-menu-container-height: 76px;
+
+

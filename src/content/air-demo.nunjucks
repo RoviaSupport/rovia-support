@@ -1,0 +1,210 @@
+				
+
+
+{% extends "air-layout.nunjucks" %}
+
+{% block content %}
+
+		<a class="topOfPage" name="top"></a> 
+		<nav class="breadcrumbs-bookmarks">
+		 <div class="row">
+		    <div class="col">
+		      <ul class="breadcrumb">
+		        <li><a href="https://wvholdings.sharepoint.com/rovia/support"><i class="fas fa-home"></i></a></li>
+		        <li aria-current="page"><a href="#">Air</a></li>
+		        <li aria-current="page">Current Page</li>
+		      </ul>               
+		    </div>
+		    <div class="col">
+		       <ul class="bookmarks">
+		          <li><a class="bookmark" href="#item1">Contacts</a></li>
+		          <li><a class="bookmark" href="#item2">Links</a></li>
+		          <!-- <li><a class="bookmark" href="#item3">Item #3</a></li> -->
+		          <!-- <li><a class="bookmark" href="#item4">Item #4</a></li> -->
+		       </ul>      
+		       
+		    </div>
+		 </div>
+
+		</nav>
+	</header>
+	<br><br>
+	<main id = "main">
+	<a class="topOfPage" name="top"></a>
+
+		<article>
+		<!--=== ARTICLE CONTENT GOES HERE  ===-->
+
+			<!--CONTACTS-->
+				<a name="item1"></a>
+				<section class="card">
+					<div class="card-header bg-primary">
+						<h2 class="card-title text-white">Air Ticketing Contacts</h2>
+					</div>
+					<div class="card-body">							
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit veniam error, at quos magnam eaque, asperiores obcaecati. 
+						</p>				
+						<table class="table table-sm table-striped">
+							<thead>
+								<tr class="bg-primary">
+									<td class="text-white">Last Name</td>
+									<td class="text-white">First Name</td>
+									<td class="text-white">Company</td>
+									<td class="text-white">Business Phone</td>
+									<td class="text-white">Email Address</td>			
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Campbell</td>
+									<td>Charlotte</td>
+									<td>Rovia</td>
+									<td>972-805-5100 x 2290</td>
+									<td>ccampbell@rovia.c.om</td>						
+								</tr>
+								<tr>
+									<td>Fauvet</td>
+									<td>Isabelle</td>
+									<td>Rovia</td>
+									<td>972-805-5100 x 2482</td>
+									<td>ifauvet@rovia.com</td>						
+								</tr>
+								<tr>
+									<td>Kelley</td>
+									<td>Doris</td>
+									<td>Rovia</td>
+									<td>972-805-5100 x 3828</td>
+									<td>dkelley@rovia.com</td>						
+								</tr>
+								<tr>
+									<td>Richardson</td>
+									<td>Valerie</td>
+									<td>Rovia</td>
+									<td>972-805-5200 x 3012</td>
+									<td>vrichardson@rovia.com</td>						
+								</tr>
+								<tr>
+									<td>Staples</td>
+									<td>Anika</td>
+									<td>Rovia</td>
+									<td>972-805-5100 x 3033</td>
+									<td>astaples@rovia.com</td>						
+								</tr>
+								<tr>
+									<td>Stefan</td>
+									<td>Casandra</td>
+									<td>Rovia</td>
+									<td>972-805-5100 x 2101</td>						
+									<td>cstefan@rovia.com</td>
+								</tr>
+								<tr>
+									<td>Truong</td>
+									<td>Hang</td>
+									<td>Rovia</td>
+									<td>972-805-5100 x 3401</td>
+									<td>htruong@rovia.com</td>						
+								</tr>
+								<tr>
+									<td>Ulmer</td>
+									<td>Michael</td>
+									<td>Rovia</td>
+									<td>972-805-5100 x 2150</td>									
+									<td>mulmer@rovia.com</td>
+								</tr>
+								<tr>
+									<td>Vaughn</td>
+									<td>Shante</td>
+									<td>Rovia</td>
+									<td>972-805-5100 x 2245</td>
+									<td>svaughn@rovia.com</td>						
+								</tr>
+								<tr>
+									<td>Weiss</td>
+									<td>April</td>
+									<td>Rovia</td>
+									<td>972-805-5100 x 3810</td>
+									<td>aweiss@rovia.com</td>						
+								</tr>
+								<tr>
+									<td>Windes</td>
+									<td>Halina</td>
+									<td>Rovia</td>
+									<td>972-805-5200 x 2455</td>
+									<td>hwindes@rovia.com</td>						
+								</tr>
+							</tbody>
+						</table>									
+					</div>
+				</section>
+						<br/><br/> 
+						<a href="#top" role="button" class="top">
+						<i class="fas fa-angle-up" aria-hidden="true"></i></a>
+						<br/><br/><br/><br/>
+			
+
+			<!--Key Links-->
+
+				<a name="item2"></a>
+				<section class="card">
+					<div class="card-header bg-primary">
+						<h2 class="card-title text-white">Important Links</h2>
+					</div>
+					<div class="card-body">					
+						<table class="table table-sm table-striped">
+							<thead class="bg-primary">
+								<tr>
+									<td class="text-white">
+										URL
+									</td>
+									<td class="text-white">
+										Notes
+									</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<a href="https://www.united.com/CMS/en-US/travel/news/Pages/travelnotices.aspx" target="blank">United Exception Policies</a>
+									</td>
+									<td>
+										Click here for current operational changes to United schedules, inclusive of irregular operations; market withdrawal; weather issues; etc.
+									</td>
+								</tr>							
+								<tr>
+									<td>
+										<a href="https://pro.delta.com/content/deltapro/en_US/home.html" target="blank">Delta Airlines Travel Agency Website</a>
+									</td>
+									<td>
+										Click on the link for Delta's Travel Advisories, Travel News and Warnings.
+									</td>
+								</tr>							
+								<tr>
+									<td>
+										<a href="https://www.alaskaair.com/travel-agent" target="blank">Alaska Airlines Travel Agent Website</a>
+									</td>
+									<td>
+										Click on link for Alaska Air Travel Agent Information including travel advisories and changes.
+									</td>
+								</tr>															
+							</tbody>
+						</table>
+					</div>
+				</section>
+				<br/><br/> 
+				<a href="#top" role="button" class="top">
+				<i class="fas fa-angle-up" aria-hidden="true"></i></a>
+				<br/><br/><br/><br/>
+									
+
+							
+												
+			
+		</article>				
+	</main>
+	
+{% endblock %}
+
+
+
+

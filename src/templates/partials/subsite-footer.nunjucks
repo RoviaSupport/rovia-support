@@ -1,0 +1,8 @@
+	<object class="footer-object" data="https://wvholdings.sharepoint.com/rovia/support/SiteAssets/partials/footer.aspx"></object>
+<!--[htmlclean-protect]-->
+    <!-- inject:js -->
+    <!-- endinject -->
+    <script src="../../siteassets/js/script.min.js"></script>
+    <!--[/htmlclean-protect]-->
+  </body>
+</html>

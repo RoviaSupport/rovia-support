@@ -1,0 +1,59 @@
+
+//TOP MARGIN 
+#titleAreaBox {
+  margin-top: $title-box-margin-top;
+}
+
+
+//HEADER {
+  header {
+    margin-bottom: $header-margin-bottom;
+}
+
+//FOOTER
+
+@include footer;
+
+
+
+//PRE TAG FOR CODING
+
+pre {
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+table.walkthrough td {
+  padding: 30px;
+}
+
+//FOOTER 
+
+.footer-object {
+	height: $footer-height;
+	overflow:hidden;
+}
+
+main {
+	margin-bottom: $footer-height;
+}
+
+
+
+footer{     
+     padding: $footer-padding;
+}	       
+
+.logo{
+    color:#FFF;
+    font-weight:800;
+    font-size:30px;
+}
+
+svg {
+  max-height: 88px;
+  max-width: 88px;
+}

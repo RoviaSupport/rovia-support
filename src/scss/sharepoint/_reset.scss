@@ -1,0 +1,49 @@
+/*bootstrap resets for SharePoint*/
+*, *:before, *:after {
+	-moz-box-sizing: content-box; /*border-box causes many issues with SP*/
+}
+
+* [class^="span"], * [class^="span"]:before, * [class^="span"]:after {
+	-moz-box-sizing: border-box;
+}
+
+img {
+	max-width: none;
+	width: auto;
+}
+
+* [class^="span"] img {
+	max-width: 100%; /*for images inside span grid*/
+}
+
+#scriptWPQ2 img, img.ms-webpart-menuArrowImg, #applist img {
+	width: auto; /*within a span may still need to have width of image not 100% for SP2013 OOTB features/imges*/
+	max-width: none;
+}
+
+.ms-siteactions-imgspan {
+	float: none;
+	margin: 0px;
+}
+
+#s4-ribbonrow [class*="span"] {
+    float: none;
+    margin-left: 0px;
+    line-height: 1.2em;
+}
+
+input.ms-cui-cb-input {
+	height: 14px;
+    padding: 3px 7px 2px;
+}
+
+select, input[type="file"] {
+    height: auto;
+    line-height: 20px;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 0px;
+}
+/*end bootstrap resets*/

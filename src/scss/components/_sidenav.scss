@@ -1,0 +1,54 @@
+@import "../util/mixins";
+
+/* The side navigation menu */
+.sidenav {
+    @include dimensions (0, 100%);
+    @include fixed(0, null, null, 0); /* Stay in place */        
+    padding-top: $sidenav-padding-top; /* Place content 60px from the top */
+    z-index: 1; /* Stay on top */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: width 0.1s ease-in-out; /* 0.5 second transition effect to slide in the sidenav */
+    
+}
+
+/* The navigation menu links */
+
+#navBookmark {
+    @include absolute(10px, null, null, 25px);    
+    cursor: pointer;
+}
+
+
+
+#innerNav {
+    
+    @include absolute (0,0,0,0);
+    @include dimensions(100%, 100%);
+    background-color: rgba(0,0,0,0.6);        
+    
+
+    a {
+    color:$sidenav-link-color;    
+        &:hover {
+            color: $sidebar-nav-link-hover-color {
+            }
+        }
+    }
+
+    .container {
+        padding-top: $sidenav-container-padding-top       
+    }
+    .closebtn {
+        @include absolute(115px, 120px, null, null);        
+        margin-left: $sidenav-closebtn-margin-left;
+    }
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}

@@ -1,0 +1,7 @@
+section.card {
+	margin-bottom: $card-margin-bottom;
+}
+
+.card, .card-header, .alert, .jumbotron {	
+	border-radius: $site-border-radius !important;
+}

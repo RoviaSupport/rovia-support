@@ -1,0 +1,59 @@
+
+//BOOKMARKS
+.bookmark {
+	@extend .badge;	
+	@extend .bg-primary;	
+	@extend .text-white;
+	margin-bottom: 3px;
+	font-size: 16px !important;
+	}
+
+
+
+
+.breadcrumb {
+	@extend .bg-primary;
+	.breadcrumb-item, i, svg {
+		@extend .text-white;
+	}
+}
+
+
+.breadcrumbs-bookmarks {
+	
+	@extend .bg-primary;	
+	ul.breadcrumb {	
+		margin-left: 4.8px;
+	@include v-margin-padding(0, 0, 10px, 10px);	
+		@extend .list-inline;
+		li {			
+			@extend .breadcrumb-item;
+			@extend .list-inline-item;			
+			a {
+				@extend .text-white;
+			}
+			&:nth-last-child(1) {
+				@extend .active;
+			}
+
+		}
+	}	
+	ul.bookmarks {		
+		margin-right: 4.8px;
+		@include v-margin-padding(0, 0, 0, 0);	
+		@extend .list-inline;
+		@extend .float-right;
+		li {
+			@extend .list-inline-item;			
+			a {
+				@extend .bookmark;			
+				@include v-margin-padding(10px, 0, 10px, 0);
+				@include site-border-radius(0);
+				font-weight: 100 !important;
+				&:hover {
+					background-color: darken($theme-color, 10%);
+				}
+			}
+		}		
+	}
+}

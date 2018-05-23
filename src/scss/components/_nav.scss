@@ -1,0 +1,255 @@
+.mega-menu{
+
+        position:absolute; //menu stretches accross the top of the screen
+        top:0;
+        left:0;
+        right:0;                        
+        width:100%;
+        height: 76px;
+        overflow:hidden; 
+        &:hover {
+            height: 900px;
+        }       
+        }
+    
+
+.menu-hide{height: $mega-menu-container-height; //menu is 110 tall and 400 tall when hovered.                
+}
+
+.menu-show {
+    height: $mega-menu-height;
+}    
+
+
+#navbarDropdown {
+    margin-top:20px; //flyout menu is flush to menu bar
+}  
+
+
+.navbar .dropdown-menu div[class*="col"] {
+   margin-bottom:1rem; // adds some margin below the link sets 
+}
+
+
+
+.navbar .dropdown-menu {
+    background-color:#0060c8;
+    top:45px; 
+    margin-top:30px; //  height of nav-item  
+    border:none;
+    border-radius:0;
+    
+    
+}
+
+
+
+@media screen and (min-width: 992px) {  
+
+    /* makes the dropdown full width  */
+.navbar .dropdown {position:static;}
+
+  
+.navbar {
+   margin-top:-8px;
+   padding-top:0;
+   padding-bottom:0; // remove the padding from the navbar so the dropdown hover state is not broken 
+}
+
+.navbar .nav-item {
+    padding:.5rem .5rem;
+    margin:0 .25rem; // remove the padding from the nav-item and add some margin to give some breathing room on hovers
+}
+
+.navbar .dropdown {
+    position:static;  //makes the dropdown full width
+}
+
+.navbar .dropdown-menu {
+  width:100%;
+  left:0;
+  right:0;
+
+  top:52px; /*  height of nav-item  */
+}
+
+
+  
+.navbar .dropdown:hover .dropdown-menu,
+.navbar .dropdown .dropdown-menu:hover {
+    //display:block!important; // shows the dropdown menu on hover
+}
+  
+  .navbar .dropdown-menu {
+    border: 1px solid rgba(0,0,0,.15);
+    background-color: #fff;
+  }
+
+}
+
+
+
+.dropdown-menu .row {
+    margin: 20px;    
+}
+
+.dropdown-menu li a {
+    display: block;
+    color: #ccc;
+    &:hover {
+        color: #fff;
+    }
+}
+
+//
+    //.navbar .dropdown-menu {
+        //border: none;
+    //}
+//
+//.dropdown {
+    //.nav-item, a:hover {
+        //color:#fff !important;
+    //}
+//}
+//
+//.dropdown-menu {
+    //border-top-color:white;
+    //borer-top-style:solid;
+//}
+//
+    ///* breakpoint and up - mega dropdown styles */
+//
+    //@media screen and (min-width: 992px) {
+//
+//
+        ////.dropdown-toggle::after {
+            ////display:none;
+        ////}
+//
+        //.nav-item a {
+            ////text-align: center;
+        //}
+//
+        //.navbar-brand {
+            //display:none;
+        //}
+//
+//
+        ///* remove the padding from the navbar so the dropdown hover state is not broken */
+        //.navbar {
+               //position: absolute !important;
+            //padding-top: 8px;
+            //padding-bottom: 8px;
+            //top:   0px !important;
+            //left:  0px !important;
+            //right: 0px !important;
+        //}
+        ///* remove the padding from the nav-item and add some margin to give some breathing room on hovers */
+//        
+        //li.nav-item > a:hover {
+            //color: #fff;
+        //}
+        //.navbar .nav-item {
+            ////padding: .5rem .5rem;
+            //margin: 0 .25rem;
+        //}
+//
+        //.flex-column .nav-item {
+            //padding: 0;
+            //margin: 0;
+        //}
+        //.flex-column .nav-link {
+            //margin: 0;
+            //padding: 0;
+        //}
+        ///* makes the dropdown full width  */
+        //.navbar .dropdown {
+            //position: static;
+        //}
+//
+        //.navbar .dropdown-menu {
+            //width: 100%;
+            //left: 0;
+            //right: 0;
+            ///*  height of nav-item  */
+            //top: 45px;
+            ////margin-top: 20px;
+        //}
+//
+        //ul.navbar-nav {
+            //width: 100%;
+            ////margin-right:0;
+        //}
+//
+        //.dropdown{
+            //width: 25% !important;
+        //}
+//
+        ///* shows the dropdown menu on hover */
+        //.navbar .dropdown:hover .dropdown-menu,
+        //.navbar .dropdown .dropdown-menu:hover {
+            //display: inline-block!important;
+        //}
+//
+        //.navbar .dropdown-menu {
+            //border: 1px solid rgba(0, 0, 0, .15);
+            //background-color: #fff;
+        //}
+    //}
+
+
+//.ms-cui-topBar1 {
+    //@extend .bg-primary;
+//}
+//
+//
+
+//.navbar {
+   //opacity: 50%;
+    //}
+//}
+//
+//.dropdown {
+   //position:relative;
+//}
+//
+//.dropdown-menu {
+    //padding-top:30px;
+    //width:80%;
+//}
+//
+//.nav-item span {
+    //width: 25px;
+    //margin: 0 auto;
+//}
+//
+//
+//.nav-item:hover:after {
+    //position: relative;
+    //bottom: -10px;
+    //border-left: solid transparent 7px;
+    //border-right: solid transparent 7px;
+    //border-top: solid #fff 7px;
+    //content: "";
+    //height: 0;
+    //left: 50%;
+    //margin: auto;
+    //width: 0;
+    //z-index:1000;
+//}
+//
+//.dropdown-toggle::after {
+    //content:none;
+//}
+//
+//.dropdown-menu .row {
+    //!padding-top: 20px;
+//}
+//
+//.nav-link {
+    //padding-bottom: 15px;
+    //&:hover {
+        //border-bottom: 2px;
+        //border-color: white;
+        //border-style:solid;
+//}

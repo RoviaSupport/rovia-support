@@ -1,0 +1,63 @@
+//@import "../util/util.scss";
+//@import "../bootstrap/variables";
+
+//GOOGLE FONTS MIXIN
+@include gwf($heading-font, $body-font, $display-font, $code-font);
+
+//BODY TEXT
+body {
+	@include fonts($body-font, black);
+}
+
+//HEADINGS 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@include fonts($heading-font, $theme-color);
+}
+
+a, .ms-link {
+	@include link-color($theme-color);        
+}
+
+.jumbotron li a {
+	display: block;
+}
+
+a:visited,.ms-link:visited {
+    color: $theme-color;
+}
+
+
+//DISPLAY TEXT
+.display-1,
+.display-2,
+.display-3,
+.display-4 {
+
+	@include fonts($display-font, $theme-color);
+}
+
+//CODE TEXT
+.txt-code {
+	@include fonts($code-font, $code-color);
+}
+
+code {
+	@extend .txt-code;
+}
+
+a:hover {
+	text-decoration:none !important;
+}
+
+svg {
+	@extend .mr-2
+}
+
+#pageContentTitle {
+	display:none;
+}

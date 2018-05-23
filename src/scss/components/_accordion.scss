@@ -1,0 +1,38 @@
+//ACCORDION CUSTOMIZATION
+#accordion {
+
+	a {    
+	display: block;
+	cursor: pointer;
+	width:100%;
+	height:100%;
+	padding:10px;
+	color:white !important;
+		&:hover {
+		color: white !important;
+		}
+		&:focus {
+		cursor:default;
+			.fa {
+			color:white;
+			cursor: default;
+			}        
+		}
+
+	}
+
+	.card-header {padding: 0;}
+
+	svg {
+		position: relative;
+		right: -45%;
+		top: -45%;		
+	}
+
+	svg {transition: .3s transform ease-in-out;}  
+
+	.collapsed svg {transform: rotate(90deg);}
+
+
+}
+

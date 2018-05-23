@@ -1,0 +1,52 @@
+//TOP BUTTON
+a.top {	
+	@extend .btn;
+	@extend .btn-outline-primary;
+	@extend .float-right;
+	border-radius: 0 !important;
+	padding-left:12px !important;
+	padding-right:6px !important;
+	&:hover {
+		svg {
+			color:white;
+		}
+	}
+	
+}
+
+.topOfPage {
+    position: absolute;
+    top:0;
+}
+
+
+.badge {
+	@include site-border-radius(0);
+}
+
+
+//circle buttons 
+
+.btn-circle {
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	padding: 6px 0;
+	font-size: 12px;
+	line-height: 1.428571429;
+	border-radius: 15px;
+}
+
+
+
+//padding: 10px 20px;
+	//border-radius: 0;	
+	//margin-bottom: 30px;
+	//-webkit-transition: background-color 0.1s ease;
+//
+	//&:hover
+    //{      
+        //@extend .bg-primary;
+	    //color: white !important;
+		//text-decoration: none !important;
+    //}
