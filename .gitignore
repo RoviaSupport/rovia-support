@@ -61,5 +61,5 @@ typings/
 tmp/
 dist/
 
-.gitignore
 node_modules
+.sublime-gulp-cache
