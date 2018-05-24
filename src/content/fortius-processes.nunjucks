@@ -1,7 +1,7 @@
 		
 
 
-{% extends "layout.nunjucks" %}
+{% extends "service-layout.nunjucks" %}
 
 {% block content %}
 <div class="container">

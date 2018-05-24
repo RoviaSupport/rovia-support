@@ -59,90 +59,138 @@
 
 
 
+
 //DEFAULT TASK
 
   gulp.task('default', ['nunjucks', 'inject', 'watch']);
+
+
+//PATHS
+
+ var src = {
+
+   root:             'src/',                            // SRC ROOT/
+   contentfolder:    'src/content/',                    // SRC/CONTENT/
+   content:          'src/content/**/*.nunjucks',       // SRC/CONTENT/**/*.NUNJUCKS
+   htmlfolder:       'src/content/html',                // SRC/CONTENT/HTML
+   html:             'src/content/html/**/*.html',      // SRC/CONTENT/HTML/**/*.html
+   img:              'src/img//*.{gif,png,jpg}',        // SRC/**/*.{gif,png,jpg}
+   jsfolder:         'src/js/',                         // SRC/JS/
+   js:               'src/js/**/*.js',                  // SRC/JS/**/*.JS
+   partialsfolder:   'src/partials/',                   // SRC/PARTIALS/
+   partials:         'src/partials/**/*.nunjucks',      // SRC/PARTIALS/**/*.NUNJUCKS
+   scssfolder:       'src/scss/',                       // SRC/SCSS/
+   scss:             'src/**/*.scss',                   // SRC/SCSS/**/*.SCSS
+   templatesfolder:  'src/templates/',                  // SRC/TEMPLATES
+
+   rovia:            'src/style.scss',
+   service:          'src/service.scss',
+   sales:            'src/sales.scss',
+   air:              'src/air.scss',
+   leadershipS:      'src/leadership.scss',
+
+ };
+
+
+
+ var tmp = {
+
+   root:             'tmp/',                            // TMP ROOT
+   html:             'tmp/**/*.html',                   // TMP/**/*.HTML
+   cssfolder:        'tmp/css/',                        // TMP/CSS
+   jsfolder:         'tmp/js/',                         // TMP/JS
+   imgfolder:        'tmp/img/',                        // TMP/IMG
+   img:              'tmp/img/**/*.{gif,png,jpg}',      // IMG
+   js:               'tmp/js/**/*.js',                  // TMP/JS/**/*.JS
+   css:              'tmp/**/*.css',                    // TMP/CSS/**/*.css
+
+   rovia:            'tmp/css/style.css',
+   service:          'tmp/css/service.css',
+   sales:            'tmp/css/sales.css',
+   air:              'tmp/css/air.css',
+   leadership:       'tmp/css/leadership.css'
+
+ };
+
+
+ var dist = {
+
+   root:             'dist/',                           // DIST ROOT    
+   img:              'dist/**/*.{gif,png,jpg}',         // DIST/**/*/{}
+   html:             'dist/**/*.html',                  // DIST/**/*/HTML   
+   jsfolder:         'dist/js/',                        // DIST/JS
+   js:               'dist/js/**/*.js',                 // DIST/JS/**/*.JS
+   cssfolder:        'dist/css/',                       // DIST/CSS
+   css:              'dist/css/**/*.css'                // DIST/CSS/**/*.css
+
+ };
+
+
+ var assets = {
+
+   root:              'C:/Users/ncoblentz/WorldVentures Holdings, LLC/Rovia Travel Support - Site Assets/',
+
+
+   partialsfolder:   'dist/partials/',                                                                     
+   cssfolder:        'dist/css/',                                                                  
+   jsfolder:         'dist/js/',                                                                 
+   imgfolder:        'dist/img/**/*.{gif,png,jpg}'                                                                     
+
+ }
+
+
+
 
 
 //PATH VARIABLES
 
   var paths = {
 
-    //FOLDERS
-
-      htmlfolder: 'src/content/html',
-      tmpCSSfolder: 'tmp/css',
-      dist:       'dist',
-      distCSSfolder:    'dist/css',
-      distJSfolder:'dist/js',
-
     //SRC - THESE ARE THE FILES YOU WILL BE WORKING WITH      
        
-      srcCONTENT:  'src/content/*.nunjucks',
-      html: 'src/content/html/*.{html,htm}', 
-      srcCSS:  'src/**/*.scss',
-      srcJS:   'src/**/*.js',  
-      srcIMG:  'src/**/*.{gif,png,jpg}',
-      templates: 'src/templates/',
+        srcCONTENT:  'src/content/*.nunjucks',//DON'T TOUCH        
+          htmlfolder: 'src/content/html', //DON'T TOUCH
+            html: 'src/content/html/*.{html,htm}', //DON'T TOUCH      
+        srcCSS:  'src/**/*.scss', //DON'T TOUCH
+        srcJS:   'src/**/*.js',  //DON'T TOUCH
+        srcIMG:  'src/**/*.{gif,png,jpg}',
+        templates: 'src/templates/',
 
     //TMP - THESE FILES WILL APPEAR ON YOUR VIRTUAL SERVER FOR DEVELOPMENT
 
       tmp:      'tmp',
-      tmpIndex: 'tmp/**/*.{html,htm}',        
-      tmpCSS:   'tmp/**/*.css',
-      tmpJS:    'tmp/**/*.js',
-      tmpIMG:   'tmp/**/*.{gif,png,jpg}',
+        tmpIndex: 'tmp/**/*.{html,htm}',
+        tmpCSSfolder: 'tmp/css', //DON'T TOUCH
+          tmpCSS:   'tmp/**/*.css',
+        tmpJS:    'tmp/**/*.js',
+        tmpIMG:   'tmp/**/*.{gif,png,jpg}',
       
 
 
     //DIST - THESE FILES ARE FULLY PROCESSED, COMPRESSED, MINIFIED AND READY FOR DEPLOYMENT
-      
-      distIndex:  'dist/**/*.{html,htm}',        
-      distCSS:    'dist/css/*.css',            
-      distJS:     'dist/**/*.js',
-      distIMG:    'dist/**/*.{gif,png,jpg}',
 
+      dist:       'dist',
+      distIndex:  'dist/**/*.{html,htm}',
+        distCSSfolder:    'dist/css',
+          distCSS:    'dist/**/*.css',      
+      distJSfolder:'dist/js',
+        distJS:     'dist/**/*.js',
+      distIMG:    'dist/**/*.{gif,png,jpg}'
 
-    //SHAREPOINT ASSET FOLDERS
-
-      sharepoint:       'C:/Users/ncoblentz/WorldVentures Holdings, LLC/Rovia Travel Support - Site Assets/',
-      sharepointPages:       'C:/Users/ncoblentz/WorldVentures Holdings, LLC/Rovia Travel Support - Site Assets/pages',
-      sharepointPageFiles:   'C:/Users/ncoblentz/WorldVentures Holdings, LLC/Rovia Travel Support - Site Assets/pages/**/*.html',
-
-      sharepointCSS:    'C:/Users/ncoblentz/WorldVentures Holdings, LLC/Rovia Travel Support - Site Assets/css/',
-      sharepointJS:     'C:/Users/ncoblentz/WorldVentures Holdings, LLC/Rovia Travel Support - Site Assets/js/',
-      sharepointIMG:    'C:/Users/ncoblentz/WorldVentures Holdings, LLC/Rovia Travel Support - Site Assets/img/',
-      //sharepointIndex:  'C:/Users/ncoblentz/WorldVentures Holdings, LLC/Rovia Travel Support - Site Assets/pages/**/*.{html, htm, aspx}',
-
-
-    // STYLESHEETS
-    
-      roviaSheet:       'src/style.scss',
-      serviceSheet:     'src/service.scss',
-      salesSheet:       'src/sales.scss',
-      airSheet:         'src/air.scss',
-      leadershipSheet:  'src/leadership.scss',
-
-      roviaCompiled:       'tmp/css/style.css',
-      serviceCompiled:    'tmp/css/service.css',
-      salesCompiled:       'tmp/css/sales.css',
-      airCompiled:         'tmp/css/air.css',
-      leadershipCompiled:  'tmp/css/leadership.css'
   };
-
 
 
   //TEMPLATE ENGINE
 
     gulp.task('nunjucks', function() {
     // GET ALL MY CONTENT FILES  
-    return gulp.src(paths.srcCONTENT) 
+    return gulp.src(src.content) // DON'T TOUCH
 
       // RUN 'EM THROUGH THE TEMPLATE ENGINE
       .pipe(nunjucksRender ({path: ['src/templates']}))
 
       // DROP 'EM OFF IN SRC/CONTENT/HTML    
-      .pipe(gulp.dest(paths.sharepointPages));  
+      .pipe(gulp.dest(src.htmlfolder));  //DON'T TOUCH
 
     });
 
@@ -150,63 +198,31 @@
 
 // COPY THOSE NEWLY PROCESSED FILES INTO THE TMP FOLDER
   gulp.task('html', function () {
-    return gulp.src(paths.sharepointPageFiles).pipe(gulp.dest(paths.tmp)); 
+    return gulp.src(src.html).pipe(gulp.dest(tmp.root)); //DON'T TOUCH
   });
 
 // COPY MY SCSS FILES INTO THE TMP FOLDER
 
-        gulp.task('rovia-sass', function() {
-        return gulp.src(paths.roviaSheet)
+    gulp.task('sass', function() {
+        return gulp.src(src.scss)
             .pipe(customPlumber('Error Running Sass'))
             .pipe(sass())
-            .pipe(gulp.dest(paths.tmpCSSfolder)) 
+            .pipe(gulp.dest(tmp.cssfolder)) // IT'S THE FOLDER,  NOT THE FILES            
             .pipe(browserSync.reload({
               stream: true
             }))
     });  
-
-        gulp.task('service-sass', function() {
-        return gulp.src(paths.serviceSheet)
-            .pipe(customPlumber('Error Running Sass'))
-            .pipe(sass())
-            .pipe(gulp.dest(paths.tmpCSSfolder)) 
-            .pipe(browserSync.reload({
-              stream: true
-            }))
-    });  
-        gulp.task('sales-sass', function() {
-        return gulp.src(paths.salesSheet)
-            .pipe(customPlumber('Error Running Sass'))
-            .pipe(sass())
-            .pipe(gulp.dest(paths.tmpCSSfolder)) 
-            .pipe(browserSync.reload({
-              stream: true
-            }))
-    });  
-
-        gulp.task('air-sass', function() {
-        return gulp.src(paths.airSheet)
-            .pipe(customPlumber('Error Running Sass'))
-            .pipe(sass())
-            .pipe(gulp.dest(paths.tmpCSSfolder)) 
-            .pipe(browserSync.reload({
-              stream: true
-            }))
-    }); 
-
-
-    gulp.task('sass', ['rovia-sass', 'service-sass', 'sales-sass', 'air-sass']);
 
 // COPY MY SCRIPTS INTO TMP/
 
   gulp.task('js', function () {
-    return gulp.src(paths.srcJS).pipe(gulp.dest(paths.tmp)); 
+    return gulp.src(src.js).pipe(gulp.dest(tmp.jsfolder)); //TON'T TOUCH
   });
 
 
 // COPY MY IMAGES TO THE TMP FOLDER
   gulp.task('img', function () {
-    return gulp.src(paths.srcIMG).pipe(gulp.dest(paths.tmp));
+    return gulp.src(src.html).pipe(gulp.dest(tmp.imgfolder)); 
   });
 
 
@@ -224,30 +240,45 @@
 
   // MAKE MY PATH VARIABLES EVEN SHORTER AND MORE SUCCINCT SO I CAN PASS THEM INTO THIS NEXT FUNCTION
       
-      var css = gulp.src(paths.tmpCSS);
-      var js = gulp.src(paths.tmpJS);
-      var img =gulp.src(paths.tmpIMG);
+      var css = gulp.src(tmp.css);
+      var js = gulp.src(tmp.js);
+      var img =gulp.src(tmp.img);
     
   // LINK MY STYLESHEETS IN THE HEAD OF EACH WEB PAGE AND MY SCRIPTS JUST BELOW THE FOOTER WHERE THEY BELONG
 
-      return gulp.src(paths.tmpIndex)
+      return gulp.src(tmp.html)
         .pipe(inject( css, { relative:true  } ))
         .pipe(inject( js,  { relative:true  } ))
         //.pipe(inject( img,  { relative:true } )) I"M NOT SURE IF I ACTUALLY NEED THIS PIECE.
-        .pipe(gulp.dest(paths.tmp));
+        .pipe(gulp.dest(tmp.root));
     });
 
 
-    gulp.task('inject:dist', ['copy:dist', 'copy-to-sharepoint'], function () {
-      var css = gulp.src(paths.distCSS);
-      var js = gulp.src(paths.distJS);
-      var img = gulp.src(paths.distIMG);
+  // INJECT JS/CSS 
+
+//gulp.task('inject:dist', ['copy:dist'], function () {
+//
+//var css = gulp.src(paths.distCSS);
+//var js = gulp.src(paths.distJS);
+//var img = gulp.src(paths.distIMG);
+//    
+//return gulp.src(paths.distIndex)
+//.pipe(inject( css, { relative:true } ))
+//.pipe(inject( js, { relative:true } ))
+////.pipe(inject( img, { relative:true } ))
+//.pipe(gulp.dest(paths.dist));
+//});
+
+    gulp.task('inject:dist', ['copy:dist'], function () {
+      var css = gulp.src(dist.css);
+      var js = gulp.src(dist.js);
+      var img = gulp.src(dist.img);
     
-    return gulp.src(paths.distIndex)
-      .pipe(inject( css, { relative:true } ))
-      .pipe(inject( js, { relative:true } ))
-      .pipe(inject( img, { relateive:true } ))
-      .pipe(gulp.dest(paths.dist));
+    return gulp.src(dist.html)
+      //.pipe(inject( css, { relative:true } ))
+      //.pipe(inject( js, { relative:true } ))
+      //.pipe(inject( img, { relateive:true } ))
+      .pipe(gulp.dest(dist.root));
 });
 
 
@@ -268,9 +299,9 @@
 
     gulp.task('watch', ['browserSync', 'sass'], function () {         
 
-    gulp.watch(paths.srcCSS, ['sass'])
-    gulp.watch(paths.srcCONTENT, ['nunjucks'])
-    gulp.watch(paths.html, ['inject'])
+    gulp.watch(src.css, ['sass'])
+    gulp.watch(src.content, ['nunjucks'])
+    gulp.watch(src.html, ['inject'])
     gulp.watch('./tmp/**/*.html').on('change', browserSync.reload);
     });
 
@@ -281,64 +312,27 @@
   //MINIFY ALL MY HTML, THEN DROP IT INTO 'DIST' FOR DEPLOYMENT
 
     gulp.task('html:dist', function () {
-      return gulp.src(paths.tmpIndex)
+      return gulp.src(src.html)
         .pipe(htmlclean())
-        .pipe(gulp.dest(paths.dist));
+        .pipe(gulp.dest(dist.root));
     });
 
-  //MINIFY ALL 4 STYLESHEETS, DROP OFF IN DIST/CSS FOLDER
-
-
-      gulp.task('rovia-compile', function () {
-      return gulp.src(paths.roviaCompiled) 
+  //MINIFY MY STYLESHEET AND DROP IT INTO 'DIST/CSS' FOR DEPLOYMENT
+    
+    gulp.task('css:dist', function () {
+      return gulp.src(tmp.css)  //DON'T TOUCH
         .pipe(concat('style.min.css'))
         .pipe(cleanCSS())
-        .pipe(gulp.dest(paths.distCSSfolder));
-        
+        .pipe(gulp.dest(dist.cssfolder));  //DON'T TOUCH
     });
-
-      gulp.task('service-compile', function () {
-      return gulp.src(paths.serviceCompiled) 
-        .pipe(concat('service.min.css'))
-        .pipe(cleanCSS())
-        .pipe(gulp.dest(paths.distCSSfolder));
-        
-    });
-
-      gulp.task('sales-compile', function () {
-      return gulp.src(paths.salesCompiled) 
-        .pipe(concat('sales.min.css'))
-        .pipe(cleanCSS())
-        .pipe(gulp.dest(paths.distCSSfolder));
-        
-    });
-
-      gulp.task('air-compile', function () {
-      return gulp.src(paths.airCompiled)  
-        .pipe(concat('air.min.css'))
-        .pipe(cleanCSS())
-        .pipe(gulp.dest(paths.distCSSfolder));
-        
-    });
-
-  //DO ALL 4 AT ONCE
-
-    gulp.task('css:dist', ['rovia-compile', 'service-compile', 'sales-compile', 'air-compile']);    
-
-
-    gulp.task('copy-to-sharepoint', function () {
-      return gulp.src(paths.distCSS).pipe(gulp.dest(paths.sharepointCSS));
-    })
-    
 
   //COMPILE MY SCRIPTS INTO ONE BIG UGLY MINIFIED .JS FILE AND DROP IT INTO 'DIST/JS' FOR DEPLOYMENT
 
     gulp.task('js:dist', function () {
-      return gulp.src(paths.srcJS) 
+      return gulp.src(src.js)  //DON'T TOUCH
         .pipe(concat('script.min.js'))
         .pipe(uglify())
-        .pipe(gulp.dest(paths.distJSfolder))
-        .pipe(gulp.dest(paths.sharepointJS));  
+        .pipe(gulp.dest(dist.jsfolder));  //DON'T TOUCH
     });
   
   //COMPRESS ALL IMAGES - WE CAN DO PLENTY OF FINE TUNING FROM HERE IF NEEDED
@@ -394,7 +388,6 @@
 
   // DO ALL THE BUILD STUFF AND GET ME MY FILES, PLEASE AND THANK YOU!
 
-    //gulp.task('build', ['inject:dist']);
     gulp.task('build', ['inject:dist']);
 
   // SERVE-DIST TASK: FOR WHEN I WANNA SEE THE FINAL PRODUCT IN MY BROWSER.  LOOK HOW FAST IT IS!!!
@@ -409,7 +402,7 @@
 
 
   gulp.task('clean', function () {
-    del([paths.tmp, paths.dist]);    
+    del([tmp.root, dist.root]);    
   });
   
 
@@ -437,3 +430,481 @@
          if (err) throw err; 
        }); 
       });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//// gulpfile.js
+//
+////DEPENDENCIES
+//
+  ////CORE DEPENDENCIES
+//
+    //var gulp = require('gulp');
+    //var sass = require('gulp-sass');
+    //var inject = require('gulp-inject');
+    //var browserSync = require('browser-sync').create();
+//
+  ////LINTING/DEBUGGING
+//
+    //var plumber = require('gulp-plumber');
+    //var notify = require('gulp-notify');
+//
+  ////COMPILING 
+//
+    //var htmlclean = require('gulp-htmlclean');
+    //var cleanCSS = require('gulp-clean-css');
+    //var concat = require('gulp-concat');
+    //var uglify = require('gulp-uglify');
+    //var rename = require('gulp-rename');
+//
+  ////CLEANUP 
+//
+    //var del = require('del');
+//    
+  ////GIT
+//
+    //var git = require('gulp-git');
+//
+  ////IMAGES
+//
+    //var imagemin = require('gulp-imagemin');
+    //var imageminPngquant = require('imagemin-pngquant');
+    //var imageminZopfli = require('imagemin-zopfli');
+    //var imageminMozjpeg = require('imagemin-mozjpeg'); //need to run 'brew install libpng'
+    //var imageminGiflossy = require('imagemin-giflossy');
+//
+  ////NUNJUCKS - TEMPLATE ENGINE  
+//
+    //var nunjucksRender = require('gulp-nunjucks-render');
+//
+////FUNCTIONS     
+//
+    //function errorHandler(err) {
+      //console.log(err.toString());
+      //this.emit('end');
+    //}
+//
+    //function customPlumber(errTitle) {
+    //return plumber({
+      ////CUSTOMIZING ERROR TITLE
+      //title:errTitle || "Error running Gulp",
+      //message: "Error: <%= error.message %>",
+      //sound: true,
+    //})
+    //}
+//
+//
+//
+////DEFAULT TASK
+//
+  //gulp.task('default', ['nunjucks', 'inject', 'watch']);
+//
+//
+//
+//
+//
+//  
+//
+//
+//
+//
+//
+  //var paths = {
+//
+//    
+//
+//
+    ////SRC - THESE ARE THE FILES YOU WILL BE WORKING WITH          
+//
+      //htmlfolder: 'src/content/html/',
+      //templatesfolder: 'src/templates/',
+      //partialsfolder: 'src/partials/',
+//
+//
+//    
+      //srcCONTENT:  'src/content/*.nunjucks',
+      //srcPARTIALS: 'src/partials/**/*.html',
+      //html: 'src/content/html/*.{html,htm}', 
+      //srcCSS:  'src/**/*.scss',
+      //srcJS:   'src/**/*.js',  
+      //srcIMG:  'src/**/*.{gif,png,jpg}',
+//
+//    
+    ////TMP - THESE FILES WILL APPEAR ON YOUR VIRTUAL SERVER FOR DEVELOPMENT
+//    
+      //tmp:      'tmp',
+      //tmpCSSfolder: 'tmp/css',
+//      
+      //tmpIndex: 'tmp/**/*.{html,htm}',        
+      //tmpCSS:   'tmp/**/*.css',
+      //tmpJS:    'tmp/**/*.js',
+      //tmpIMG:   'tmp/**/*.{gif,png,jpg}',
+//
+//      
+    ////DIST - THESE FILES ARE FULLY PROCESSED, COMPRESSED, MINIFIED AND READY FOR DEPLOYMENT
+//
+      //dist:             'dist',
+      //distJSfolder:     'dist/js',
+      //distCSSfolder:    'dist/css',
+//      
+      //distIndex:         'dist/**/*.{html,htm}',        
+      //distCSS:           'dist/css/*.css',            
+      //distJS:            'dist/**/*.js',
+      //distIMG:           'dist/**/*.{gif,png,jpg}',
+//
+//
+    ////SHAREPOINT ASSET FOLDERS
+//
+      //sharepoint:       'C:/Users/ncoblentz/WorldVentures Holdings, LLC/Rovia Travel Support - Site Assets/',
+      //pagesfolder:      'C:/Users/ncoblentz/WorldVentures Holdings, LLC/Rovia Travel Support - Site Assets/pages',
+      //cSSfolder:        'C:/Users/ncoblentz/WorldVentures Holdings, LLC/Rovia Travel Support - Site Assets/css/',
+      //jSfolder:         'C:/Users/ncoblentz/WorldVentures Holdings, LLC/Rovia Travel Support - Site Assets/js/',
+      //imgfolder:        'C:/Users/ncoblentz/WorldVentures Holdings, LLC/Rovia Travel Support - Site Assets/img/',
+      //partialsfolder:   'C:/Users/ncoblentz/WorldVentures Holdings, LLC/Rovia Travel Support - Site Assets/partials/',
+//
+      //pages:   'C:/Users/ncoblentz/WorldVentures Holdings, LLC/Rovia Travel Support - Site Assets/pages/**/*.html',      
+//
+//
+    //// STYLESHEETS
+//    
+      //roviaSheet:       'src/style.scss',
+      //serviceSheet:     'src/service.scss',
+      //salesSheet:       'src/sales.scss',
+      //airSheet:         'src/air.scss',
+      //leadershipSheet:  'src/leadership.scss',
+//
+      //roviaCompiled:       'tmp/css/style.css',
+      //serviceCompiled:     'tmp/css/service.css',
+      //salesCompiled:       'tmp/css/sales.css',
+      //airCompiled:         'tmp/css/air.css',
+      //leadershipCompiled:  'tmp/css/leadership.css'
+//
+  //};
+//
+//
+//
+  ////TEMPLATE ENGINE
+//
+    //gulp.task('nunjucks', function() {
+    //// GET ALL MY CONTENT FILES  
+    //return gulp.src(src.content) 
+//
+      //// RUN 'EM THROUGH THE TEMPLATE ENGINE
+      //.pipe(nunjucksRender ({path: ['src/templates']}))
+//
+      //// DROP 'EM OFF IN SRC/CONTENT/HTML    
+      //.pipe(gulp.dest(tmp.html))      
+//
+    //});
+//
+//
+    ////gulp.task('copy-partials', function () {
+      ////gulp.src(src.partials).pipe(rename("*.aspx")).pipe(gulp.dest('sharepointPartials'));
+    ////});
+//
+//// COPY HTML/CSS/JS
+//
+//// COPY THOSE NEWLY PROCESSED FILES INTO THE TMP FOLDER
+  //gulp.task('html', function () {
+    //return gulp.src(src.html).pipe(gulp.dest(tmp.root)); 
+  //});
+//
+//// COPY MY SCSS FILES INTO THE TMP FOLDER
+//
+        //gulp.task('rovia-sass', function() {
+        //return gulp.src(src.rovia)
+            //.pipe(customPlumber('Error Running Sass'))
+            //.pipe(sass())
+            //.pipe(gulp.dest(tmp.cssfolder)) 
+            //.pipe(browserSync.reload({
+              //stream: true
+            //}))
+    //});  
+//
+        //gulp.task('service-sass', function() {
+        //return gulp.src(src.service)
+            //.pipe(customPlumber('Error Running Sass'))
+            //.pipe(sass())
+            //.pipe(gulp.dest(tmp.cssfolder)) 
+            //.pipe(browserSync.reload({
+              //stream: true
+            //}))
+    //});  
+        //gulp.task('sales-sass', function() {
+        //return gulp.src(src.sales)
+            //.pipe(customPlumber('Error Running Sass'))
+            //.pipe(sass())
+            //.pipe(gulp.dest(tmp.cssfolder)) 
+            //.pipe(browserSync.reload({
+              //stream: true
+            //}))
+    //});  
+//
+        //gulp.task('air-sass', function() {
+        //return gulp.src(src.air)
+            //.pipe(customPlumber('Error Running Sass'))
+            //.pipe(sass())
+            //.pipe(gulp.dest(tmp.cssfolder)) 
+            //.pipe(browserSync.reload({
+              //stream: true
+            //}))
+    //}); 
+//
+//
+    //gulp.task('sass', ['rovia-sass', 'service-sass', 'sales-sass', 'air-sass']);
+//
+//// COPY MY SCRIPTS INTO TMP/
+//
+  //gulp.task('js', function () {
+    //return gulp.src(src.js).pipe(gulp.dest(tmp.jsfolder)); 
+  //});
+//
+//
+//// COPY MY IMAGES TO THE TMP FOLDER
+  //gulp.task('img', function () {
+    //return gulp.src(src.img).pipe(gulp.dest(tmp.imgfolder));
+  //});
+//
+//
+//// COPY ALL THE THINGS!!!
+//
+  //gulp.task('copy', ['nunjucks', 'html', 'js', 'sass', 'img']);
+//
+//
+  //// COMPILE ALL MY SASS AND MOVE IT TO TMP
+//   
+//
+ ////DO ALL THAT STUFF WE JUST SAID IN ONE COMMAND, AND SOME MORE COOL STUFF TOO!!!
+ //gulp.task('inject', ['copy'], function () {
+//
+  //// MAKE MY PATH VARIABLES EVEN SHORTER AND MORE SUCCINCT SO I CAN PASS THEM INTO THIS NEXT FUNCTION
+//      
+      //var css = gulp.src(tmp.css);
+      //var js = gulp.src(tmp.js);
+      ////var img =gulp.src(tmp.img);
+//    
+  //// LINK MY STYLESHEETS IN THE HEAD OF EACH WEB PAGE AND MY SCRIPTS JUST BELOW THE FOOTER WHERE THEY BELONG
+//
+      //return gulp.src(tmp.html)
+        //.pipe(inject( css, { relative:true  } ))
+        //.pipe(inject( js,  { relative:true  } ))
+        ////.pipe(inject( img,  { relative:true } )) I"M NOT SURE IF I ACTUALLY NEED THIS PIECE.
+        //.pipe(gulp.dest(tmp.root));
+    //});
+//
+//
+    //gulp.task('inject:dist', ['copy:dist', 'copy-to-sharepoint'], function () {
+      //var css = gulp.src(dist.css);
+      //var js = gulp.src(dist.js);
+      //var img = gulp.src(dist.img);
+//    
+    //return gulp.src(dist.html)
+      //.pipe(inject( css, { relative:true } ))
+      //.pipe(inject( js, { relative:true } ))
+      //.pipe(inject( img, { relateive:true } ))
+      //.pipe(gulp.dest(paths.dist));
+//});
+//
+//
+////SERVER, BROWSER-SYNC  
+//
+  ////CREATE A VIRTUAL SERVER USING THE FILES IN THE TMP FOLDER, AND MAKE SURE MY SASS IS FRESHLY COMPILED
+//
+//
+//  
+    //gulp.task('browserSync', function() {
+      //browserSync.init ({
+        //server: {
+          //baseDir: './tmp'
+//
+        //},
+      //})
+    //})
+//
+    //gulp.task('watch', ['browserSync', 'sass'], function () {         
+//
+    //gulp.watch(src.css, ['sass'])
+    //gulp.watch(src.content, ['nunjucks'])
+    //gulp.watch(src.js, ['inject'])
+    //gulp.watch('./tmp/**/*.html').on('change', browserSync.reload);
+    //});
+//
+//
+//
+////DIST BUILD
+//
+//
+  ////MINIFY ALL MY HTML, THEN DROP IT INTO 'DIST' FOR DEPLOYMENT
+//
+    //gulp.task('html:dist', function () {
+      //return gulp.src(src.html)
+        //.pipe(htmlclean())
+        //.pipe(gulp.dest(dist.root));
+    //});
+//
+  ////MINIFY ALL 4 STYLESHEETS, DROP OFF IN DIST/CSS FOLDER
+//
+//
+      //gulp.task('rovia-compile', function () {
+      //return gulp.src(tmp.rovia) 
+        //.pipe(concat('style.min.css'))
+        //.pipe(cleanCSS())
+        //.pipe(gulp.dest(tmp.cssfolder));
+//        
+    //});
+//
+      //gulp.task('service-compile', function () {
+      //return gulp.src(tmp.service) 
+        //.pipe(concat('service.min.css'))
+        //.pipe(cleanCSS())
+        //.pipe(gulp.dest(tmp.cssfolder));
+//        
+    //});
+//
+      //gulp.task('sales-compile', function () {
+      //return gulp.src(tmp.sales) 
+        //.pipe(concat('sales.min.css'))
+        //.pipe(cleanCSS())
+        //.pipe(gulp.dest(tmp.cssfolder));
+//        
+    //});
+//
+      //gulp.task('air-compile', function () {
+      //return gulp.src(tmp.air)  
+        //.pipe(concat('air.min.css'))
+        //.pipe(cleanCSS())
+        //.pipe(gulp.dest(tmp.cssfolder));
+//        
+    //});
+//
+  ////DO ALL 4 AT ONCE
+//
+    //gulp.task('css:dist', ['rovia-compile', 'service-compile', 'sales-compile', 'air-compile']);    
+//
+//
+    //gulp.task('copy-to-sharepoint', function () {
+      //return gulp.src(dist.css).pipe(gulp.dest(assets.cssfolder));
+    //})
+//    
+//
+  ////COMPILE MY SCRIPTS INTO ONE BIG UGLY MINIFIED .JS FILE AND DROP IT INTO 'DIST/JS' FOR DEPLOYMENT
+//
+    //gulp.task('js:dist', function () {
+      //return gulp.src(src.js) 
+        //.pipe(concat('script.min.js'))
+        //.pipe(uglify())
+        //.pipe(gulp.dest(dist.jsfolder))
+        //.pipe(gulp.dest(assets.jsfolder));  
+    //});
+//  
+  ////COMPRESS ALL IMAGES - WE CAN DO PLENTY OF FINE TUNING FROM HERE IF NEEDED
+//
+    //gulp.task('imagemin', function() {
+        //return gulp.src([src.img])
+            //.pipe(imagemin([ //png
+//                
+                //imageminPngquant({
+                    //speed: 1,
+                    //quality: 98 //lossy settings
+                //}),
+                //imageminZopfli({
+                    //more: true
+                //}),
+                ////gif
+                //// imagemin.gifsicle({
+                ////     interlaced: true,
+                ////     optimizationLevel: 3
+                //// }),
+                ////gif very light lossy, use only one of gifsicle or Giflossy
+//
+                //imageminGiflossy({
+                    //optimizationLevel: 3,
+                    //optimize: 3, //keep-empty: Preserve empty transparent frames
+                    //lossy: 2
+                //}),
+                ////svg
+                //imagemin.svgo({
+                    //plugins: [{
+                        //removeViewBox: false
+                    //}]
+                //}),
+                ////jpg lossless
+                //imagemin.jpegtran({
+                    //progressive: true
+                //}),
+                ////jpg very light lossy, use vs jpegtran
+                //imageminMozjpeg({
+                    //quality: 90
+                //})
+            //]))
+            //.pipe(gulp.dest(dist.imgfolder))
+            //.pipe(gulp.dest(assets.imgfolder));
+        //});
+    //gulp.task('img:dist', ['imagemin']);
+//
+//
+  ////COPY EVERTTHING TO DIST
+//
+    //gulp.task('copy:dist', ['html:dist', 'css:dist', 'js:dist', 'img:dist']);
+//  
+//
+//
+  //// DO ALL THE BUILD STUFF AND GET ME MY FILES, PLEASE AND THANK YOU!
+//
+    ////gulp.task('build', ['inject:dist']);
+    //gulp.task('build', ['inject:dist']);
+//
+  //// SERVE-DIST TASK: FOR WHEN I WANNA SEE THE FINAL PRODUCT IN MY BROWSER.  LOOK HOW FAST IT IS!!!
+//   
+    //gulp.task('serve-dist',function() {
+//
+        //browserSync.init({ server: "./dist"  });
+      //});
+//
+//
+//// CLEANUP - IT'S JUST LIKE STARTING OVER.  CLEAN UP ALL YOUR DTMP, DIST AND LEFTOVER CSS, LEAVING ONLY YOUR PRISTINE SRC FIILES.
+//
+//
+  //gulp.task('clean', function () {
+    //del([tmp.root, dist.root]);    
+  //});
+//  
+//
+//// GIT
+//
+  //// COMMIT + PROMPT... I'm not too sure about this one yet...
+    //gulp.task('commit', function(){
+        //var message;
+        //gulp.src('./*', {buffer:false})
+        //.pipe(prompt.prompt({
+            //type: 'input',
+            //name: 'commit',
+            //message: 'Please enter commit message...'
+        //}, function(res){
+            //message = res.commit;
+        //}))
+        //.pipe(git.commit(message));
+    //});
+//
+  //// PUSH ORIGIN MASTER: PUSH EVERYTHING TO MY REPO ONCE EVERYTHING IS COMMITTED
+//
+    //gulp.task('push', function() {
+      //git.push('origin', 'master', function (err) 
+        //{
+         //if (err) throw err; 
+       //}); 
+      //});
+//
+//

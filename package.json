@@ -25,6 +25,7 @@
     "gulp-nunjucks-render": "^2.2.2",
     "gulp-plumber": "^1.2.0",
     "gulp-prompt": "^1.0.1",
+    "gulp-rename": "^1.2.3",
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^3.0.0",
     "imagemin-giflossy": "^5.1.10",

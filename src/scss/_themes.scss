@@ -19,14 +19,6 @@ $theme-colors: ("primary": $theme-color) !default;
 	}
 
 
-body.service {
-	@include theme($service-teal);
-}
-
-body.sales {
-	@include  theme($sales-pink);
-}
-
-body.air {
-	@include theme($air-sky);
-}
+	#main {
+		margin-top:30px;
+	}
